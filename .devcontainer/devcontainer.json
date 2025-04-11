@@ -1,0 +1,21 @@
+{
+    "name": "vscode-devcontainer-example",
+    "image": "mcr.microsoft.com/vscode/devcontainers/base:ubuntu-22.04",
+    "mounts": [
+        "source=${localEnv:HOME}${localEnv:USERPROFILE},target=/host-home-folder,type=bind,consistency=cached"
+    ],
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "streetsidesoftware.code-spell-checker",
+                "bierner.github-markdown-preview"
+            ]
+        }
+    },
+    "features": {
+        "ghcr.io/devcontainers/features/python:1": {},
+        "ghcr.io/devcontainers/features/aws-cli:1": {},
+        "ghcr.io/devcontainers-extra/features/ansible:2": {},
+        "ghcr.io/devcontainers/features/terraform:1": {}
+    }
+}
